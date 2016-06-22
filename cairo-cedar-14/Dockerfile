@@ -3,7 +3,8 @@ FROM mojodna/cedar-14-stack
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN \
-  apt-get upgrade -y
+  apt-get upgrade -y && \
+  apt-get install ttf-ancient-fonts
 
 ADD ./harfbuzz.tar.bz2 /tmp
 ADD ./freetype.tar.bz2 /tmp
